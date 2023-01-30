@@ -142,7 +142,7 @@ $("#withdraw-cancel").on("click", function () {
 })
 $("#deposit-start").on("click", async function () {
   let address = await wallet.getAddress()
-  location.href = `ton://${address.toString(true, true, false)}`
+  location.href = `ton://transfer/${address.toString(true, true, false)}`
 })
 $("#share-start").on("click", function () {
   $("#withdraw-window").hide()
