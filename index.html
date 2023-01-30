@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jellyf!sh</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="tonweb.js"></script>
+    <script src="tonweb-mnemonic.js"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>j3llyf!sh</h1>
+      <p>temporary TON wallets and secure checks</p>
+      <div id="About">
+        <h3>About</h3>
+        <p>
+          sometimes you need temporary crypto wallet to do some stuff and then
+          drop it. we provide you the most convenient way to do this
+        </p>
+        <p>
+          and even more!.. you can share access to the temporary wallet. it
+          works like checks, but without trusting of 3rd party services. even we
+          do not have access to your funds
+        </p>
+      </div>
+      <div id="wallet">
+        <h3><a id="address">...</a></h3>
+        <button id="address-copy">copy address</button>
+        <h3 id="balance">0 Toncoin</h3>
+        <button id="deposit-start">deposit</button><br />
+        <button id="withdraw-start">withdraw</button><br />
+        <button id="share-start">share access</button><br />
+      </div>
+    </main>
+    <div class="window" id="withdraw-window">
+      <div>
+        <input type="number" id="withdraw-amount" placeholder="amount" /><br />
+        <input type="text" id="withdraw-address" placeholder="address" /><br />
+        <textarea
+          id=""
+          cols="30"
+          rows="10"
+          id="withdraw-comment"
+          placeholder="comment (optional)"
+        ></textarea
+        ><br />
+        <p id="withdraw-fee"></p>
+        <button id="withdraw-next">next</button>
+        <button id="withdraw-confirm">confirm!</button>
+        <button id="withdraw-cancel">cancel</button>
+      </div>
+    </div>
+    <div class="window" id="status-window">
+      <div>
+        <h3 id="status">...</h3>
+        <button id="status-exit">thanks!</button>
+      </div>
+    </div>
+    <div class="window" id="share-window">
+      <div>
+        <p>share this link or mnemonic phrase with the recipient.</p>
+        <p>
+          we do not have access to your funds. wallet keys never leave your
+          browser or browser of recipient
+        </p>
+        <p><a href="" id="share-link"></a></p>
+        <button id="share-link-button">copy link</button>
+        <p id="share-mnemonic"></p>
+        <button id="share-close">close</button>
+      </div>
+    </div>
+  </body>
+</html>
